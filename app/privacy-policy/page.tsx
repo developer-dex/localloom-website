@@ -128,8 +128,8 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="mt-3 rounded-lg bg-gray-50 p-4">
               <p className="font-medium text-gray-900">LocalLoom</p>
-              <p>Email: privacy@localloom.com.au</p>
-              <p>Phone: +123 456 7891</p>
+              <p>Email: localloomau@gmail.com</p>
+              <p>Phone: +61 488 323 492</p>
               <p>Melbourne, Australia</p>
             </div>
           </section>

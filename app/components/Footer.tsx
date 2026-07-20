@@ -5,8 +5,7 @@ import { PhoneIcon } from "./icons";
 const QUICK_LINKS = ["Home", "About Us", "Testimonials", "Contact"];
 const UTILITIES = [
   { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookie Policy", href: "#" },
+  { label: "Delete Account", href: "/delete-account" },
 ];
 const SOCIALS = [
   { src: "/figma/facebook.png", label: "Facebook" },
@@ -37,7 +36,7 @@ export function Footer() {
           <div className="flex items-center gap-3.5">
             <PhoneIcon className="h-[18px] w-[18px] text-white" />
             <span className="text-[17px] font-medium tracking-tight text-white/80">
-              +123 456 7891
+              +61 488 323 492
             </span>
           </div>
         </div>
