@@ -37,7 +37,7 @@ export function Footer() {
           <div className="flex items-center gap-3.5">
             <PhoneIcon className="h-[18px] w-[18px] text-white" />
             <span className="text-[17px] font-medium tracking-tight text-white/80">
-              +123 456 7891
+              +61 488 323 492
             </span>
           </div>
         </div>
