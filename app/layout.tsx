@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "LocalLoom — Find Trusted Local Tradies Near You",
   description:
     "LocalLoom helps homeowners connect with verified local tradies across Melbourne. Browse trusted professionals, view real customer reviews, and contact them directly without paying commissions or dealing with lead-selling platforms.",
+  verification: {
+    google: "6ImxH-fLKFbW-N9xxHsMU9zK-CRxW981GMruhV8QMFI",
+  },
 };
 
 export default function RootLayout({
