@@ -143,6 +143,27 @@ aws s3 sync out/ s3://localloom-website-prod --delete --region ap-southeast-4 --
     - HTTP error code: **403** → Response page: `/index.html` → HTTP response: **200**
 22. Create another for **404** → Response page: `/404.html` → HTTP response: **404**
 
+**Make page links like `/about` work:**
+
+The static export saves `/about` as `about.html`, but CloudFront asks S3 for a file named exactly `about`. Without this function, opening `/about`, `/terms` or `/contact` directly (typing it, refreshing or arriving from Google) shows the homepage through the 403 rule above. The function rewrites `/about` and `/about/` to `/about.html` and leaves `/`, and any path with a file extension, alone.
+
+- Live since 17 Nov 2026 as **`localloom-website-url-rewrite`** on distribution `E2QONS0F0M86O9`.
+- Code: [`cloudfront-url-rewrite.js`](cloudfront-url-rewrite.js).
+- Cost: $0. The first 2 million requests a month are free.
+
+To set it up again:
+
+```bash
+cd localloom-website/aws-guide
+aws cloudfront create-function --name localloom-website-url-rewrite \
+  --function-config '{"Comment":"Rewrite /about to /about.html","Runtime":"cloudfront-js-2.0"}' \
+  --function-code fileb://cloudfront-url-rewrite.js --profile localloom
+aws cloudfront publish-function --name localloom-website-url-rewrite \
+  --if-match <ETag from describe-function --stage DEVELOPMENT> --profile localloom
+```
+
+Then go to the distribution → **Behaviors** → edit the default behavior → **Function associations** → **Viewer request** → CloudFront Functions → `localloom-website-url-rewrite` → **Save changes**.
+
 **Add Custom Domain:**
 
 23. **General** tab → **Edit**
@@ -248,8 +269,8 @@ npm run build
 aws s3 sync out/ s3://localloom-website-prod --delete --region ap-southeast-4 --profile localloom
 
 # Invalidate CloudFront cache
-aws cloudfront create-invalidation \
-  --distribution-id <distribution-id> \
+aws cloudfront create-invalidation --no-cli-pager \
+  --distribution-id E2QONS0F0M86O9 \
   --paths "/*" \
   --profile localloom
 ```
