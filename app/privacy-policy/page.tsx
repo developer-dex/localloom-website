@@ -1,28 +1,41 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import type { Metadata } from "next";
+import { company, contact, formattedAddress, product } from "../lib/company";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — LocalLoom",
-  description:
-    "Read LocalLoom's Privacy Policy to understand how we collect, use, and protect your personal information.",
+  title: `Privacy Policy — ${product.name}`,
+  description: `How ${company.legalName}, the operator of ${product.name}, collects, uses and protects your personal information under Australian privacy law.`,
 };
 
 export default function PrivacyPolicyPage() {
+  const address = formattedAddress();
+
   return (
     <>
       <Header />
       <main className="mx-auto max-w-[800px] px-6 py-16 sm:px-10 lg:py-24">
         <h1 className="mb-8 text-4xl font-bold text-gray-900 lg:text-5xl">Privacy Policy</h1>
-        <p className="mb-6 text-sm text-gray-500">Last updated: January 2025</p>
+        <p className="mb-6 text-sm text-gray-500">Last updated: October 2026</p>
 
         <div className="space-y-8 text-base leading-relaxed text-gray-700">
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-gray-900">1. Introduction</h2>
             <p>
-              Welcome to LocalLoom. We are committed to protecting your personal information and
-              your right to privacy. This Privacy Policy explains how we collect, use, disclose,
-              and safeguard your information when you use our website and mobile application.
+              This Privacy Policy applies to{" "}
+              <strong className="font-semibold text-gray-900">{product.name}</strong>, a
+              product owned and operated by{" "}
+              <strong className="font-semibold text-gray-900">{company.legalName}</strong>, a
+              company registered in {company.incorporatedIn}
+              {company.abn ? ` (ABN ${company.abn})` : ""}. In this policy,
+              &quot;we&quot;, &quot;us&quot; and &quot;our&quot; mean {company.legalName}.
+            </p>
+            <p className="mt-3">
+              We are the entity responsible for the personal information collected through
+              the {product.name} mobile applications and the website at {product.domain}. We
+              handle personal information in accordance with the Privacy Act 1988 (Cth) and
+              the Australian Privacy Principles. This policy explains how we collect, use,
+              disclose and safeguard your information.
             </p>
           </section>
 
@@ -103,9 +116,10 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-gray-900">7. Cookies</h2>
             <p>
-              We use cookies and similar tracking technologies to enhance your experience on our
-              platform. You can control cookie preferences through your browser settings. For more
-              details, please refer to our Cookie Policy.
+              We use cookies and similar technologies on {product.domain} to keep the site
+              working correctly and to understand how it is used in aggregate. You can
+              control or clear cookies at any time through your browser settings. Blocking
+              cookies may affect some parts of the site.
             </p>
           </section>
 
@@ -123,14 +137,20 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-gray-900">9. Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy or our data practices, please
-              contact us at:
+              If you have any questions about this Privacy Policy or our data practices, or
+              wish to make a privacy complaint, please contact the entity responsible for{" "}
+              {product.name}:
             </p>
             <div className="mt-3 rounded-lg bg-gray-50 p-4">
-              <p className="font-medium text-gray-900">LocalLoom</p>
-              <p>Email: localloomau@gmail.com</p>
-              <p>Phone: +61 488 323 492</p>
-              <p>Melbourne, Australia</p>
+              <p className="font-medium text-gray-900">{company.legalName}</p>
+              <p>
+                {product.name} — a product of {company.legalName}
+              </p>
+              {company.abn ? <p>ABN: {company.abn}</p> : null}
+              {company.acn ? <p>ACN: {company.acn}</p> : null}
+              <p>Email: {contact.email}</p>
+              <p>Phone: {contact.phone}</p>
+              <p>{address}</p>
             </div>
           </section>
         </div>

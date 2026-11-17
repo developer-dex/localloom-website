@@ -1,9 +1,10 @@
+import { CompanyStrip } from "./components/CompanyStrip";
 import { ContactSection } from "./components/ContactSection";
 import { FeatureGridSection } from "./components/FeatureGridSection";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
+import { HowItWorksSection } from "./components/HowItWorksSection";
 import { SiteAnimations } from "./components/SiteAnimations";
-import { TestimonialsSection } from "./components/TestimonialsSection";
 import { TrustSection } from "./components/TrustSection";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <FeatureGridSection />
       <TrustSection />
-      <TestimonialsSection />
+      <HowItWorksSection />
+      <CompanyStrip />
       <ContactSection />
       <Footer />
     </div>

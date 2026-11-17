@@ -1,14 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FloatingRatingCard } from "./FloatingRatingCard";
 import { Header } from "./Header";
-
-const AVATARS = [
-  "/figma/profile-01.png",
-  "/figma/profile-02.png",
-  "/figma/profile-03.png",
-  "/figma/profile-04.png",
-  "/figma/profile_o1.png",
-];
+import { company, product } from "../lib/company";
 
 export function Hero() {
   return (
@@ -32,38 +26,30 @@ export function Hero() {
         {/* Hero content */}
         <div className="flex w-full max-w-[657px] flex-col gap-8 lg:gap-10">
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-3">
-              <div className="flex -space-x-3">
-                {AVATARS.map((src, i) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt={`Customer ${i + 1}`}
-                    width={45}
-                    height={45}
-                    data-anim="hero-avatar"
-                    className="h-[45px] w-[45px] shrink-0 rounded-full border-2 border-white object-cover"
-                  />
-                ))}
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <div className="flex gap-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Image
-                      key={i}
-                      data-anim="hero-star"
-                      src="/figma/star-yellow.png"
-                      alt=""
-                      width={18}
-                      height={18}
-                    />
-                  ))}
-                </div>
-                <p data-anim="hero-social-text" className="text-sm text-[#333333]">
-                  5,000+ Happy Customers
-                </p>
-              </div>
-            </div>
+            {/*
+              Previously an avatar row with "5,000+ Happy Customers" and a
+              five-star rating. Both were invented figures for a product that
+              has not launched, which is a poor look on the website submitted
+              for company verification. Replaced with claims that are true
+              today and describe how the platform actually works.
+            */}
+            <ul
+              data-anim="hero-social-text"
+              className="flex flex-wrap items-center gap-2"
+            >
+              {[
+                "Licence & insurance checked",
+                "ABN verified",
+                "No commission on jobs",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#333333] sm:text-sm"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <div className="flex flex-col items-start gap-4">
               <h1
@@ -84,31 +70,45 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <a
-              href="#"
-              data-anim="hero-cta"
-              className="flex items-center gap-2.5 rounded-full bg-primary px-3.5 py-3 transition-transform duration-300 hover:scale-[1.04]"
-            >
-              <Image src="/figma/appstore.png" alt="" width={36} height={36} />
-              <span className="flex flex-col">
-                <span className="text-[10px] leading-[14px] text-white">Get it on</span>
-                <span className="text-base font-medium leading-4 text-white">App Store</span>
-              </span>
-            </a>
-            <a
-              href="#"
-              data-anim="hero-cta"
-              className="flex items-center gap-2.5 rounded-full border border-primary px-3.5 py-3 transition-transform duration-300 hover:scale-[1.04]"
-            >
-              <Image src="/figma/playstore.png" alt="" width={36} height={36} />
-              <span className="flex flex-col">
-                <span className="text-[10px] leading-[14px] text-[#333333]">Get it on</span>
-                <span className="text-base font-medium leading-4 text-[#333333]">
-                  Google Play
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              {/*
+                Rendered as static badges rather than links until the store
+                listings are live — a store button wired to "#" reads as a
+                broken website during review.
+              */}
+              <div
+                data-anim="hero-cta"
+                className="flex items-center gap-2.5 rounded-full bg-primary px-3.5 py-3"
+              >
+                <Image src="/figma/appstore.png" alt="" width={36} height={36} />
+                <span className="flex flex-col">
+                  <span className="text-[10px] leading-[14px] text-white">Coming soon to</span>
+                  <span className="text-base font-medium leading-4 text-white">App Store</span>
                 </span>
-              </span>
-            </a>
+              </div>
+              <div
+                data-anim="hero-cta"
+                className="flex items-center gap-2.5 rounded-full border border-primary px-3.5 py-3"
+              >
+                <Image src="/figma/playstore.png" alt="" width={36} height={36} />
+                <span className="flex flex-col">
+                  <span className="text-[10px] leading-[14px] text-[#333333]">
+                    Coming soon to
+                  </span>
+                  <span className="text-base font-medium leading-4 text-[#333333]">
+                    Google Play
+                  </span>
+                </span>
+              </div>
+            </div>
+            <p className="text-sm text-[#4E5059]">
+              The {product.name} apps are built and operated by {company.legalName}.{" "}
+              <Link href="/contact" className="font-medium text-primary underline">
+                Get in touch
+              </Link>{" "}
+              to be notified at launch.
+            </p>
           </div>
         </div>
 

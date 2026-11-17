@@ -1,14 +1,16 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import type { Metadata } from "next";
+import { company, contact, formattedAddress, product } from "../lib/company";
 
 export const metadata: Metadata = {
-  title: "Delete Your Account — LocalLoom",
-  description:
-    "Instructions for permanently deleting your LocalLoom account and information about what happens to your data.",
+  title: `Delete Your Account — ${product.name}`,
+  description: `How to permanently delete your ${product.name} account and what happens to your data. ${product.name} is operated by ${company.legalName}.`,
 };
 
 export default function DeleteAccountPage() {
+  const address = formattedAddress();
+
   return (
     <>
       <Header />
@@ -16,13 +18,15 @@ export default function DeleteAccountPage() {
         <h1 className="mb-8 text-4xl font-bold text-gray-900 lg:text-5xl">
           Delete Your Account
         </h1>
-        <p className="mb-6 text-sm text-gray-500">Last updated: July 2026</p>
+        <p className="mb-6 text-sm text-gray-500">Last updated: October 2026</p>
 
         <div className="space-y-8 text-base leading-relaxed text-gray-700">
           <section>
             <p>
-              Users can permanently delete their LocalLoom account directly from the app. No
-              website login or additional steps are required.
+              You can permanently delete your {product.name} account directly from the app.
+              No website login or additional steps are required. {product.name} is operated
+              by <strong className="font-semibold text-gray-900">{company.legalName}</strong>
+              , which is the entity that holds and deletes your data.
             </p>
           </section>
 
@@ -56,14 +60,19 @@ export default function DeleteAccountPage() {
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-gray-900">Need Help?</h2>
             <p>
-              If you're unable to delete your account from within the app, or have questions
+              If you are unable to delete your account from within the app, or have questions
               about your data, please contact us at:
             </p>
             <div className="mt-3 rounded-lg bg-gray-50 p-4">
-              <p className="font-medium text-gray-900">LocalLoom</p>
-              <p>Email: localloomau@gmail.com</p>
-              <p>Phone: +61 488 323 492</p>
-              <p>Melbourne, Australia</p>
+              <p className="font-medium text-gray-900">{company.legalName}</p>
+              <p>
+                {product.name} — a product of {company.legalName}
+              </p>
+              {company.abn ? <p>ABN: {company.abn}</p> : null}
+              {company.acn ? <p>ACN: {company.acn}</p> : null}
+              <p>Email: {contact.email}</p>
+              <p>Phone: {contact.phone}</p>
+              <p>{address}</p>
             </div>
           </section>
         </div>

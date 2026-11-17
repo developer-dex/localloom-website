@@ -34,9 +34,7 @@ export function SiteAnimations() {
 
         /* ---------- initial states (page is covered by the overlay) ------ */
         gsap.set("header", { autoAlpha: 0, y: -24 });
-        gsap.set('[data-anim="hero-avatar"]', { autoAlpha: 0, scale: 0.3 });
-        gsap.set('[data-anim="hero-star"]', { autoAlpha: 0, scale: 0 });
-        gsap.set('[data-anim="hero-social-text"]', { autoAlpha: 0, y: 12 });
+        gsap.set('[data-anim="hero-social-text"] > li', { autoAlpha: 0, y: 12, scale: 0.9 });
         gsap.set('[data-anim="hero-desc"]', { autoAlpha: 0, y: 24 });
         gsap.set('[data-anim="hero-cta"]', { autoAlpha: 0, y: 20 });
         gsap.set('[data-anim="hero-visual"]', { autoAlpha: 0, y: 50, scale: 0.94 });
@@ -56,16 +54,17 @@ export function SiteAnimations() {
         heroTl
           .to("header", { autoAlpha: 1, y: 0, duration: 0.6 })
           .to(
-            '[data-anim="hero-avatar"]',
-            { autoAlpha: 1, scale: 1, duration: 0.5, ease: "back.out(2.2)", stagger: 0.07 },
+            '[data-anim="hero-social-text"] > li',
+            {
+              autoAlpha: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.45,
+              ease: "back.out(2)",
+              stagger: 0.08,
+            },
             "-=0.3"
           )
-          .to(
-            '[data-anim="hero-star"]',
-            { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(3)", stagger: 0.05 },
-            "-=0.35"
-          )
-          .to('[data-anim="hero-social-text"]', { autoAlpha: 1, y: 0, duration: 0.4 }, "-=0.3")
           .from(
             split.words,
             { yPercent: 120, autoAlpha: 0, duration: 0.7, stagger: 0.05 },
@@ -211,23 +210,16 @@ export function SiteAnimations() {
           scrollTrigger: { trigger: '[data-anim="trust-point"]', start: "top 82%" },
         });
 
-        /* Testimonials */
-        fadeUp('[data-anim="ts-head"]', '[data-anim="ts-head"]');
-        gsap.from('[data-anim="ts-card"]', {
-          autoAlpha: 0,
-          y: 44,
-          duration: 0.7,
-          ease: "power3.out",
-          stagger: { each: 0.08, from: "start" },
-          scrollTrigger: { trigger: '[data-anim="ts-grid"]', start: "top 80%" },
-        });
-        gsap.from('[data-anim="ts-badge"]', {
-          autoAlpha: 0,
-          scale: 0.6,
-          y: 20,
-          duration: 0.7,
-          ease: "back.out(2)",
-          scrollTrigger: { trigger: '[data-anim="ts-grid"]', start: "bottom 92%" },
+        /* How it works */
+        fadeUp('[data-anim="hiw-head"]', '[data-anim="hiw-head"]');
+        $('[data-anim="hiw-card"]').forEach((card) => {
+          gsap.from(card, {
+            autoAlpha: 0,
+            y: 36,
+            duration: 0.7,
+            ease: "power3.out",
+            scrollTrigger: { trigger: card, start: "top 88%" },
+          });
         });
 
         /* Contact */

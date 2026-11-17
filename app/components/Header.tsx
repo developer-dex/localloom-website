@@ -7,10 +7,9 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Resources", href: "#resources" },
+  { label: "About", href: "/about" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -44,12 +43,12 @@ export function Header() {
       </nav>
 
       <div className="hidden lg:block">
-        <a
-          href="#partner"
+        <Link
+          href="/contact"
           className="rounded-full bg-primary px-3.5 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
         >
           Partner with us
-        </a>
+        </Link>
       </div>
 
       <button
@@ -79,13 +78,13 @@ export function Header() {
               </Link>
             );
           })}
-          <a
-            href="#partner"
+          <Link
+            href="/contact"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-full bg-primary px-3.5 py-3 text-center text-base font-medium text-white"
           >
             Partner with us
-          </a>
+          </Link>
         </div>
       ) : null}
     </header>
