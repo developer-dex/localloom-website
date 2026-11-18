@@ -23,7 +23,7 @@ export function ContactSection() {
             Have a question? Our team is happy to assist you
           </h2>
           <p className="text-sm leading-relaxed text-[#4E5059] sm:text-base">
-            Whether you are a homeowner who needs help finding the right tradie, or a trade
+            Whether you are a homeowner who needs help finding the right service provider, or a trade
             business wanting to list a verified profile, our Melbourne-based support team is
             here to help. We answer enquiries Monday to Friday.
           </p>

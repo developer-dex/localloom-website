@@ -56,13 +56,13 @@ export function Hero() {
                 data-anim="hero-title"
                 className="text-[34px] font-bold leading-[1.15] text-[#171717] sm:text-[44px] lg:text-[56px] lg:leading-[70px]"
               >
-                Find Trusted Local Tradies Near You
+                Find Trusted Local Service Providers Near You
               </h1>
               <p
                 data-anim="hero-desc"
                 className="max-w-[653px] text-base font-medium leading-[1.55] text-[#4E5059] sm:text-lg lg:text-xl lg:leading-[29px]"
               >
-                LocalLoom helps homeowners connect with verified local tradies across
+                LocalLoom helps homeowners connect with verified local service providers across
                 Melbourne. Browse trusted professionals, view real customer reviews, and
                 contact them directly without paying commissions or dealing with
                 lead-selling platforms.

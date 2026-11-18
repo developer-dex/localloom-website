@@ -21,7 +21,7 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   metadataBase: new URL(product.url),
   title: {
-    default: `${product.name} — Find Trusted Local Tradies Near You`,
+    default: `${product.name} — Find Trusted Local Service Providers Near You`,
     template: `%s`,
   },
   description: product.description,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: product.name,
-    title: `${product.name} — Find Trusted Local Tradies Near You`,
+    title: `${product.name} — Find Trusted Local Service Providers Near You`,
     description: product.description,
     url: product.url,
     locale: "en_AU",

@@ -32,7 +32,7 @@ const CONTACT_DETAILS: { label: string; lines: string[] }[] = [
 ];
 
 const REASONS = [
-  "Help finding the right tradie for a job",
+  "Help finding the right service provider for a job",
   "Listing your trade business on LocalLoom",
   "Questions about profile verification",
   "Privacy, data or account enquiries",
@@ -153,7 +153,7 @@ export default function ContactPage() {
 
               <label className="flex flex-col gap-2">
                 <span className="text-sm font-semibold text-[#171717]">
-                  Business name (if you are a tradie)
+                  Business name (if you are a service provider)
                 </span>
                 <input
                   type="text"

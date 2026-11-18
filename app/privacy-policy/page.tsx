@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
               <li>Name, email address, and phone number</li>
               <li>Account credentials and profile information</li>
               <li>Communications you send to us or through our platform</li>
-              <li>Location data (with your consent) to connect you with local tradies</li>
+              <li>Location data (with your consent) to connect you with local service providers</li>
               <li>Reviews and feedback you leave for service providers</li>
             </ul>
           </section>
@@ -62,7 +62,7 @@ export default function PrivacyPolicyPage() {
             <p className="mb-3">We use the information we collect to:</p>
             <ul className="ml-6 list-disc space-y-2">
               <li>Provide, maintain, and improve our services</li>
-              <li>Connect homeowners with trusted local tradies in Melbourne</li>
+              <li>Connect homeowners with trusted local service providers in Melbourne</li>
               <li>Send you service-related communications and updates</li>
               <li>Respond to your enquiries and provide customer support</li>
               <li>Monitor and analyse trends, usage, and activities on our platform</li>

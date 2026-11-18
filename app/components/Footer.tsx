@@ -43,7 +43,7 @@ export function Footer() {
         <div data-anim="foot-col" className="flex w-full flex-col gap-6 lg:max-w-[410px]">
           <Image src="/figma/footer-logo.png" alt={product.name} width={160} height={74} />
           <p className="max-w-[363px] text-lg leading-[29px] text-white/80">
-            Helping homeowners connect with trusted local tradies across Melbourne. No
+            Helping homeowners connect with trusted local service providers across Melbourne. No
             commissions. No lead-selling. Just genuine local connections.
           </p>
 

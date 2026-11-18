@@ -47,14 +47,14 @@ export default function TermsPage() {
             </h2>
             <p>
               {product.name} is a directory and connection platform. It helps homeowners
-              find local trade professionals (&quot;tradies&quot;), view their profiles and
+              find local trade professionals (&quot;service providers&quot;), view their profiles and
               reviews, and contact them directly.
             </p>
             <p className="mt-3">
-              {company.legalName} is not a party to any agreement you make with a tradie. We
+              {company.legalName} is not a party to any agreement you make with a service provider. We
               do not perform trade work, do not supervise it, do not set prices, and do not
               act as an agent for either side. Any quote, contract, payment or warranty is
-              strictly between you and the tradie you engage.
+              strictly between you and the service provider you engage.
             </p>
           </section>
 
@@ -84,10 +84,10 @@ export default function TermsPage() {
 
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-gray-900">
-              4. Obligations for tradies
+              4. Obligations for service providers
             </h2>
             <p className="mb-3">
-              If you register as a tradie, you additionally agree that:
+              If you register as a service provider, you additionally agree that:
             </p>
             <ul className="ml-6 list-disc space-y-2">
               <li>
@@ -108,7 +108,7 @@ export default function TermsPage() {
               </li>
             </ul>
             <p className="mt-3">
-              We review tradie profiles before they are published and may suspend or remove
+              We review service provider profiles before they are published and may suspend or remove
               a profile that does not meet these obligations.
             </p>
           </section>
@@ -119,7 +119,7 @@ export default function TermsPage() {
             </h2>
             <ul className="ml-6 list-disc space-y-2">
               <li>
-                Reviews may only be submitted after a genuine interaction with the tradie
+                Reviews may only be submitted after a genuine interaction with the service provider
                 being reviewed, and must reflect your honest experience.
               </li>
               <li>
@@ -162,7 +162,7 @@ export default function TermsPage() {
             <p>
               {product.name} does not charge a commission on work won through the platform
               and does not sell customer enquiries as leads. Where a paid feature or
-              subscription is offered to tradies, its price and terms will be shown clearly
+              subscription is offered to service providers, its price and terms will be shown clearly
               before you purchase it.
             </p>
           </section>
@@ -172,11 +172,11 @@ export default function TermsPage() {
               8. Verification and its limits
             </h2>
             <p>
-              We check the documents tradies provide and verify ABNs against the Australian
+              We check the documents service providers provide and verify ABNs against the Australian
               Business Register. That check reduces risk but does not guarantee the quality,
               safety, timeliness or legality of any work performed. You should still make
               your own enquiries, confirm licences and insurance, and get a written quote
-              before engaging a tradie.
+              before engaging a service provider.
             </p>
           </section>
 
@@ -203,7 +203,7 @@ export default function TermsPage() {
             </p>
             <p className="mt-3">
               Subject to that, {company.legalName} is not liable for any loss arising from
-              work performed or not performed by a tradie, from a dispute between you and
+              work performed or not performed by a service provider, from a dispute between you and
               another user, or from indirect or consequential loss. Where we are permitted to
               limit our liability, it is limited to resupplying the relevant service or
               paying the cost of having it resupplied.

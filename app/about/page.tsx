@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 
 const WHAT_WE_DO = [
   {
-    title: "Verification of tradie profiles",
-    body: "Every tradie who joins LocalLoom submits their business details, trade licence and insurance documents. Profiles are reviewed before they go live so homeowners are browsing professionals whose credentials have been checked.",
+    title: "Verification of service provider profiles",
+    body: "Every service provider who joins LocalLoom submits their business details, trade licence and insurance documents. Profiles are reviewed before they go live so homeowners are browsing professionals whose credentials have been checked.",
   },
   {
     title: "Genuine, interaction-backed reviews",
-    body: "Reviews can only be left after a real connection between a homeowner and a tradie has taken place. That constraint is what keeps the ratings on the platform worth reading.",
+    body: "Reviews can only be left after a real connection between a homeowner and a service provider has taken place. That constraint is what keeps the ratings on the platform worth reading.",
   },
   {
     title: "Direct contact, no lead-selling",
-    body: "Homeowners contact tradies directly by phone, WhatsApp or in-app chat. LocalLoom does not resell enquiries as leads and does not take a commission on work that is won through the platform.",
+    body: "Homeowners contact service providers directly by phone, WhatsApp or in-app chat. LocalLoom does not resell enquiries as leads and does not take a commission on work that is won through the platform.",
   },
   {
     title: "Local search built around suburbs",
-    body: "Search by suburb, browse a map of nearby professionals, or filter by a service radius so the results are tradies who actually travel to the job.",
+    body: "Search by suburb, browse a map of nearby professionals, or filter by a service radius so the results are service providers who actually travel to the job.",
   },
 ];
 
@@ -150,14 +150,14 @@ export default function AboutPage() {
           <section>
             <h2 className="mb-3 text-2xl font-semibold text-[#171717]">Why we built it</h2>
             <p className="mb-4">
-              Finding a reliable tradie in Melbourne usually means one of two bad options:
+              Finding a reliable service provider in Melbourne usually means one of two bad options:
               asking around and hoping, or going through a platform that sells your enquiry
               to several businesses at once and takes a cut of the job. The second option
-              costs tradies money on every enquiry, which eventually shows up in the quote
+              costs service providers money on every enquiry, which eventually shows up in the quote
               the homeowner receives.
             </p>
             <p>
-              {company.legalName} built {product.name} to remove that middle layer. Tradies
+              {company.legalName} built {product.name} to remove that middle layer. Service providers
               keep a verified profile with their work, qualifications and reviews.
               Homeowners find them by suburb and get in touch directly. No commission on
               the job, no resold leads.
@@ -183,7 +183,7 @@ export default function AboutPage() {
             <h2 className="mb-3 text-2xl font-semibold text-[#171717]">Who we serve</h2>
             <p>
               {product.name} serves two groups. Homeowners and renters across Melbourne use
-              it to find and contact a verified tradie for a specific job. Tradies and small
+              it to find and contact a verified service provider for a specific job. Service providers and small
               trade businesses use it to publish a verified profile, show their completed
               work, and receive enquiries directly from customers in the suburbs they cover.
             </p>

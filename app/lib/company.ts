@@ -57,7 +57,7 @@ export const product = {
   url: "https://localloom.com.au",
   tagline: "Weaving Local Connections",
   description:
-    "LocalLoom helps homeowners connect with verified local tradies across Melbourne. Browse trusted professionals, view real customer reviews, and contact them directly without paying commissions or dealing with lead-selling platforms.",
+    "LocalLoom helps homeowners connect with verified local service providers across Melbourne. Browse trusted professionals, view real customer reviews, and contact them directly without paying commissions or dealing with lead-selling platforms.",
 } as const;
 
 export const contact = {

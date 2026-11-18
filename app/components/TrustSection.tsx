@@ -5,19 +5,19 @@ const POINTS = [
     icon: "/figma/star-review.svg",
     title: "Real Reviews From Real Customers",
     description:
-      "Our review system is designed to ensure authenticity. Reviews can only be submitted after a customer has genuinely connected with a tradie, helping maintain trustworthy ratings.",
+      "Our review system is designed to ensure authenticity. Reviews can only be submitted after a customer has genuinely connected with a service provider, helping maintain trustworthy ratings.",
   },
   {
     icon: "/figma/call-calling.svg",
     title: "Direct Contact, No Middleman",
     description:
-      "Contact tradies directly through phone, WhatsApp, or chat. No hidden fees, commissions, or unnecessary barriers.",
+      "Contact service providers directly through phone, WhatsApp, or chat. No hidden fees, commissions, or unnecessary barriers.",
   },
   {
     icon: "/figma/people.svg",
     title: "Local Experts Near You",
     description:
-      "Search by suburb, explore nearby professionals on a map, or find tradies within your preferred radius.",
+      "Search by suburb, explore nearby professionals on a map, or find service providers within your preferred radius.",
   },
 ];
 
@@ -28,7 +28,7 @@ export function TrustSection() {
         <Image
           data-anim="trust-photo"
           src="/figma/team-photo.png"
-          alt="Two tradies reviewing job details on a laptop"
+          alt="Two service providers reviewing job details on a laptop"
           width={475}
           height={513}
           className="w-full rounded-3xl object-cover"
@@ -39,7 +39,7 @@ export function TrustSection() {
             data-anim="trust-title"
             className="text-[28px] font-bold leading-tight text-[#171717] sm:text-[36px]"
           >
-            Verified Tradies You Can Trust
+            Verified Service Providers You Can Trust
           </h2>
 
           {POINTS.map((point) => (

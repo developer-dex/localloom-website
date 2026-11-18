@@ -12,7 +12,7 @@ const HOMEOWNER_STEPS = [
   {
     step: "01",
     title: "Search your suburb",
-    body: "Tell LocalLoom what you need done and where you are. Results are filtered to tradies who actually service your suburb, either by postcode or by the travel radius they have set.",
+    body: "Tell LocalLoom what you need done and where you are. Results are filtered to service providers who actually service your suburb, either by postcode or by the travel radius they have set.",
   },
   {
     step: "02",
@@ -21,8 +21,8 @@ const HOMEOWNER_STEPS = [
   },
   {
     step: "03",
-    title: "Contact the tradie directly",
-    body: "Call, message on WhatsApp, or start an in-app chat. The enquiry goes to that one tradie. It is not sold on to a panel of competitors, and no commission is taken on the job.",
+    title: "Contact the service provider directly",
+    body: "Call, message on WhatsApp, or start an in-app chat. The enquiry goes to that one service provider. It is not sold on to a panel of competitors, and no commission is taken on the job.",
   },
 ];
 
@@ -30,7 +30,7 @@ const TRADIE_STEPS = [
   {
     step: "01",
     title: "Register your business",
-    body: "Create a tradie account with your business details and ABN. ABNs are checked against the Australian Business Register during signup.",
+    body: "Create a service provider account with your business details and ABN. ABNs are checked against the Australian Business Register during signup.",
   },
   {
     step: "02",
@@ -47,19 +47,19 @@ const TRADIE_STEPS = [
 const FAQS = [
   {
     q: `Does ${product.name} charge commission on a job?`,
-    a: "No. LocalLoom does not take a percentage of the work a tradie wins through the platform, and it does not charge homeowners to make contact.",
+    a: "No. LocalLoom does not take a percentage of the work a service provider wins through the platform, and it does not charge homeowners to make contact.",
   },
   {
     q: "Do you sell my enquiry to multiple businesses?",
-    a: "No. When you contact a tradie, that enquiry goes to the tradie you chose. We do not operate a lead-resale model.",
+    a: "No. When you contact a service provider, that enquiry goes to the service provider you chose. We do not operate a lead-resale model.",
   },
   {
     q: "What does verified actually mean?",
-    a: "Before a tradie profile goes live, our team checks the submitted business details, ABN, trade licence and insurance documents. Verification reduces risk, but we still recommend you confirm licences and get a written quote before engaging anyone.",
+    a: "Before a service provider profile goes live, our team checks the submitted business details, ABN, trade licence and insurance documents. Verification reduces risk, but we still recommend you confirm licences and get a written quote before engaging anyone.",
   },
   {
     q: "How do reviews work?",
-    a: "A review can only be submitted after a genuine connection between a customer and a tradie has been made through the platform, which is what keeps the ratings meaningful.",
+    a: "A review can only be submitted after a genuine connection between a customer and a service provider has been made through the platform, which is what keeps the ratings meaningful.",
   },
   {
     q: "Which areas do you cover?",
@@ -108,7 +108,7 @@ export function HowItWorksSection() {
           How it works
         </span>
         <h2 className="text-[28px] font-bold leading-tight text-[#171717] sm:text-[36px]">
-          Three steps from a job on your list to a tradie on your street
+          Three steps from a job on your list to a service provider on your street
         </h2>
         <p className="text-base text-[#4E5059] sm:text-lg">
           No commissions, no resold enquiries, no middleman between you and the person
@@ -127,7 +127,7 @@ export function HowItWorksSection() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <h3 className="text-xl font-semibold text-[#171717]">For tradies</h3>
+          <h3 className="text-xl font-semibold text-[#171717]">For service providers</h3>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {TRADIE_STEPS.map((s) => (
               <StepCard key={s.title} {...s} anim="hiw-card" />

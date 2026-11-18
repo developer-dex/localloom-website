@@ -9,9 +9,9 @@ type Feature = {
 const LEFT_FEATURES: Feature[] = [
   {
     icon: "/figma/icon01.svg",
-    title: "Verified Local Tradies",
+    title: "Verified Local Service Providers",
     description:
-      "Every tradie profile is reviewed and verified before going live, helping you find reliable professionals you can trust.",
+      "Every service provider profile is reviewed and verified before going live, helping you find reliable professionals you can trust.",
   },
   {
     icon: "/figma/icon-03.svg",
@@ -26,7 +26,7 @@ const RIGHT_FEATURES: Feature[] = [
     icon: "/figma/icon-02.svg",
     title: "Smart Local Search",
     description:
-      "Search tradies by suburb, map location, or service radius to quickly find professionals available near you.",
+      "Search service providers by suburb, map location, or service radius to quickly find professionals available near you.",
   },
   {
     icon: "/figma/icon-04.png",
@@ -57,11 +57,11 @@ export function FeatureGridSection() {
         className="mx-auto flex max-w-[700px] flex-col items-center gap-4 text-center"
       >
         <h2 className="text-[28px] font-bold leading-tight text-[#171717] sm:text-[36px]">
-          Everything You Need to Find the Right Tradie
+          Everything You Need to Find the Right Service Provider
         </h2>
         <p className="text-base text-[#4E5059] sm:text-lg">
           Connect with verified local professionals, compare genuine reviews, and contact
-          trusted tradies directly—all in one place.
+          trusted service providers directly—all in one place.
         </p>
       </div>
 
@@ -85,7 +85,7 @@ export function FeatureGridSection() {
           <Image
             data-anim="fg-mockup"
             src="/figma/app-mockup.png"
-            alt="LocalLoom app showing popular categories and nearby tradies"
+            alt="LocalLoom app showing popular categories and nearby service providers"
             width={314}
             height={382}
             className="w-full max-w-[280px]"
